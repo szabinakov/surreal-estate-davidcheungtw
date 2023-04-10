@@ -1,71 +1,76 @@
-# Getting Started with Create React App
+# Surreal Estate App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Brief
 
-## Available Scripts
+This application uses to search property in external API.
 
-In the project directory, you can run:
+The search result can be sorted and filtered by user.
 
-### `npm start`
+User can add the result to their own property page.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+User can view all property in property page.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Screenshots of app
 
-### `npm test`
+- desktop screen to show all images
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  <img src="" height="200">
 
-### `npm run build`
+- desktop screen clicking one image
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  <img src="" height="200">
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- mobile screen to show images
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  <img src="" height="200">
 
-### `npm run eject`
+## Testing utilities used (Jest, React Testing Library)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+| Utilities | From                     | Usage                                                          |
+| --------- | ------------------------ | -------------------------------------------------------------- |
+| renderer  | "react-test-renderer"    | to generate component snapshots to catch unanticipated changes |
+| render    | "@testing-library/react" | to create the virtual test environment                         |
+| fireEvent | "@testing-library/react" | to simulate event trigger on component                         |
+| waitFor   | "@testing-library/react" | await for a group of actions                                   |
+| spyOn     | "jest"                   | to mock response from axios API calls                          |
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Technologies
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- [React](https://react.dev/learn): create a React app project template
+- [Axios API](https://axios-http.com/docs/intro): promise-based HTTP Client for node.js and the browser
+- [Prop types](https://www.npmjs.com/package/prop-types): runtime type checking for React props and similar objects
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Instructions
 
-## Learn More
+- Clone the repo:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+git clone https://github.com/DavidCheungTW/surreal-estate.git
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Move into the directory and install:
 
-### Code Splitting
+```
+cd surreal-estate
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- To start and run on port 3000:
 
-### Analyzing the Bundle Size
+```
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- To run the tests:
 
-### Making a Progressive Web App
+```
+npm test
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Extra features
 
-### Advanced Configuration
+-
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Author
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# surreal-estate
+[David Cheung](https://www.linkedin.com/in/david-cheung-473597199/)
