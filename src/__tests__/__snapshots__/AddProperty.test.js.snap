@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddProperty Renders as expected 1`] = `
+<div>
+  Add Property Page
+</div>
+`;
