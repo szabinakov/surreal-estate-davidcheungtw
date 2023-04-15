@@ -1,16 +1,72 @@
 .add-property {
   padding: 10px;
   display: flex;
-  flex-wrap: wrap;
-  background-color: lightseagreen;
+  flex-direction: column;
+  background-color: lightgrey;
+}
+
+.add-property-form {
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .add-property label {
-  margin: 10px;
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* width: 100%; */
   /* padding: 10px; */
-  background-color: lightpink;
+  /* background-color: lightpink; */
+  /* border: 2px red solid; */
   /* margin-left: 10px;
   margin-right: 10px; */
   /* padding-left: 10px;
   padding-right: 10px; */
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+select {
+  width: 300px;
+  /* padding: 12px 20px;
+  margin: 8px 0; */
+  background-color: rgba(0, 0, 0, 0);
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  /* border: 1px solid #ccc; */
+  /* border-radius: 4px; */
+  /* box-sizing: border-box; */
+}
+
+button {
+  width: 300px;
+  /* width: 100%; */
+  /* background-color: #4caf50; */
+  /* color: white;
+  padding: 14px 20px;
+  margin: 8px 0; */
+  /* border-radius: 4px; */
+  margin: 0;
+  margin-top: 10px;
+  /* padding: 0;
+  border: none; */
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darkgrey;
+  color: white;
+}
+
+.error-message {
+  margin: 10px;
+  color: red;
 }

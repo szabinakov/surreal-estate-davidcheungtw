@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, MemoryRouter } from "react-router-dom";
+import { MemoryRouter } from "react-router-dom";
 
 import { render, screen } from "@testing-library/react";
 
@@ -7,7 +7,7 @@ import renderer from "react-test-renderer";
 import NavBar from "../components/NavBar";
 
 describe("NavBar", () => {
-  xit("Renders as expected", () => {
+  test("Renders as expected", () => {
     const rendered = renderer.create(
       <MemoryRouter>
         <NavBar />
@@ -17,21 +17,27 @@ describe("NavBar", () => {
     expect(rendered).toMatchSnapshot();
   });
 
-  xit("renders learn react link", () => {
-    const history = createMemoryHistory();
+  test("Assert View Properties", () => {
     render(
-      <Router history={history}>
+      <MemoryRouter>
         <NavBar />
-      </Router>
+      </MemoryRouter>
     );
 
-    // expect(screen.getByText("View Properties")).toBeTruthy();
-    // expect(screen.getByText("View Properties")).toBeInstanceOf(
-    //   HTMLParagraphElement
-    // );
-    // expect(screen.getByText("Add a Property")).toBeTruthy();
-    // expect(screen.getByText("Add a Property")).toBeInstanceOf(
-    //   HTMLParagraphElement
-    // );
+    expect(screen.getByText(/View Properties/i)).toBeInstanceOf(
+      HTMLAnchorElement
+    );
+  });
+
+  test("Assert Add a Property", () => {
+    render(
+      <MemoryRouter>
+        <NavBar />
+      </MemoryRouter>
+    );
+
+    expect(screen.getByText(/Add a Property/i)).toBeInstanceOf(
+      HTMLAnchorElement
+    );
   });
 });

@@ -2,6 +2,8 @@
 
 exports[`Properties Renders as expected 1`] = `
 <div>
-  Properties Page
+  <h3>
+    Properties Page
+  </h3>
 </div>
 `;

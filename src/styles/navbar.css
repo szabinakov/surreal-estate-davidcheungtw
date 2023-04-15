@@ -6,8 +6,8 @@
 }
 
 .navbar-logo {
-  width: 17%;
-  height: 17%;
+  width: 150px;
+  height: 50px;
   align-self: center;
 }
 
@@ -21,7 +21,8 @@
 .navbar ul {
   margin: 0;
   padding: 0;
-  align-self: center;
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .navbar li {

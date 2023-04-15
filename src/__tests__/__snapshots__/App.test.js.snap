@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Renders as expected 1`] = `
+<div
+  className="App"
+>
+  <h2>
+    Surreal Estate
+  </h2>
+  <div
+    className="navbar"
+  >
+    <img
+      alt="logo"
+      className="navbar-logo"
+      src="logo.png"
+    />
+    <ul
+      className="navbar-links"
+    >
+      <li
+        className="navbar-links-item"
+      >
+        <a
+          className="item"
+          href="/"
+          onClick={[Function]}
+        >
+          View Properties
+        </a>
+      </li>
+      <li
+        className="navbar-links-item"
+      >
+        <a
+          className="item"
+          href="/add-property"
+          onClick={[Function]}
+        >
+          Add a Property
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <h3>
+      Properties Page
+    </h3>
+  </div>
+</div>
+`;

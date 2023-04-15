@@ -5,7 +5,7 @@ import renderer from "react-test-renderer";
 import App from "../components/App";
 
 describe("App", () => {
-  xit("Renders as expected", () => {
+  test("Renders as expected", () => {
     const rendered = renderer.create(
       <Router>
         <App />
@@ -15,12 +15,16 @@ describe("App", () => {
     expect(rendered).toMatchSnapshot();
   });
 
-  xit("renders learn react link", () => {
-    render(<App />);
+  test("Assert Surreal Estate Heading", () => {
+    render(
+      <Router>
+        <App />
+      </Router>
+    );
 
-    expect(screen.getByText("Surreal Estate")).toBeTruthy();
-    // expect(screen.getByText("Surreal Estate")).toBeInstanceOf(
-    //   HTMLParagraphElement
-    // );
+    expect(screen.getByText(/Surreal Estate/i)).toBeTruthy();
+    expect(screen.getByText(/Surreal Estate/i)).toBeInstanceOf(
+      HTMLHeadingElement
+    );
   });
 });

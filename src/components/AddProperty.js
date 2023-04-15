@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+// eslint-disable-next-line import/extensions
+import postProperty from "../requests/postProperty.js";
+
 import "../styles/add-property.css";
 
 const AddProperty = () => {
@@ -14,21 +17,37 @@ const AddProperty = () => {
     },
   };
   const [fields, setFields] = useState(initialState.fields);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleFieldChange = (event) => {
     setFields({ ...fields, [event.target.name]: event.target.value });
   };
 
-  const handleAddProperty = (event) => {
+  const handleAddProperty = async (event) => {
     event.preventDefault();
-    console.log(fields);
+    const { title, city, type, bedrooms, bathrooms, price, email } = fields;
+    if (
+      title &&
+      city &&
+      type &&
+      bedrooms > 0 &&
+      bathrooms > 0 &&
+      price > 0 &&
+      email
+    ) {
+      const results = await postProperty(fields);
+      setErrorMessage(results);
+      return;
+    }
+    setErrorMessage("Please enter missing information!");
   };
 
   return (
     <div className="add-property">
-      <form onSubmit={handleAddProperty}>
+      <h3>Add a Property</h3>
+      <form className="add-property-form" onSubmit={handleAddProperty}>
         <label htmlFor="title">
-          Title
+          Property Description
           <input
             type="text"
             id="title"
@@ -37,21 +56,6 @@ const AddProperty = () => {
             onChange={handleFieldChange}
             placeholder="2 bed flat"
           />
-        </label>
-
-        <label htmlFor="city">
-          City
-          <select
-            id="city"
-            name="city"
-            value={fields.city}
-            onChange={handleFieldChange}
-          >
-            <option value="Manchester">Manchester</option>
-            <option value="Leeds">Leeds</option>
-            <option value="Sheffield">Sheffield</option>
-            <option value="Liverpool">Liverpool</option>
-          </select>
         </label>
 
         <label htmlFor="type">
@@ -116,6 +120,21 @@ const AddProperty = () => {
           />
         </label>
 
+        <label htmlFor="city">
+          City
+          <select
+            id="city"
+            name="city"
+            value={fields.city}
+            onChange={handleFieldChange}
+          >
+            <option value="Manchester">Manchester</option>
+            <option value="Leeds">Leeds</option>
+            <option value="Sheffield">Sheffield</option>
+            <option value="Liverpool">Liverpool</option>
+          </select>
+        </label>
+
         <label htmlFor="email">
           Email
           <input
@@ -130,6 +149,7 @@ const AddProperty = () => {
 
         <button type="submit">Add</button>
       </form>
+      {errorMessage && <div className="error-message">{errorMessage}</div>}
     </div>
   );
 };
