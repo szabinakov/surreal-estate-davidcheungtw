@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-// eslint-disable-next-line import/extensions
-import postProperty from "../requests/postProperty.js";
-
+import Alert from "./Alert";
+// eslint-disable-next-line import/order
+import axios from "axios";
 import "../styles/add-property.css";
 
 const AddProperty = () => {
@@ -15,9 +15,13 @@ const AddProperty = () => {
       price: 0,
       email: "",
     },
+    alert: {
+      message: "",
+      isSuccess: false,
+    },
   };
   const [fields, setFields] = useState(initialState.fields);
-  const [errorMessage, setErrorMessage] = useState("");
+  const [alert, setAlert] = useState(initialState.alert);
 
   const handleFieldChange = (event) => {
     setFields({ ...fields, [event.target.name]: event.target.value });
@@ -26,6 +30,12 @@ const AddProperty = () => {
   const handleAddProperty = async (event) => {
     event.preventDefault();
     const { title, city, type, bedrooms, bathrooms, price, email } = fields;
+
+    setAlert({
+      message: "",
+      isSuccess: false,
+    });
+
     if (
       title &&
       city &&
@@ -35,17 +45,35 @@ const AddProperty = () => {
       price > 0 &&
       email
     ) {
-      const results = await postProperty(fields);
-      setErrorMessage(results);
+      axios
+        .post("http://localhost:4000/api/v1/PropertyListing", fields)
+        .then(() => {
+          setAlert({
+            message: "Property added.",
+            isSuccess: true,
+          });
+        })
+        .catch(() => {
+          setAlert({
+            message: "Server error. Please try again later.",
+            isSuccess: false,
+          });
+        });
+
       return;
     }
-    setErrorMessage("Please enter missing information!");
+    setAlert({
+      message: "Please enter missing information!",
+      isSuccess: false,
+    });
   };
 
   return (
     <div className="add-property">
       <h3>Add a Property</h3>
+
       <form className="add-property-form" onSubmit={handleAddProperty}>
+        <Alert message={alert.message} isSuccess={alert.isSuccess} />
         <label htmlFor="title">
           Property Description
           <input
@@ -149,7 +177,6 @@ const AddProperty = () => {
 
         <button type="submit">Add</button>
       </form>
-      {errorMessage && <div className="error-message">{errorMessage}</div>}
     </div>
   );
 };

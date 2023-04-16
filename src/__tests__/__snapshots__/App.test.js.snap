@@ -42,7 +42,9 @@ exports[`App Renders as expected 1`] = `
       </li>
     </ul>
   </div>
-  <div>
+  <div
+    className="properties"
+  >
     <h3>
       Properties Page
     </h3>

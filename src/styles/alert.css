@@ -1,0 +1,15 @@
+.alert {
+  width: 100%;
+  text-align: left;
+  padding: 5px;
+}
+.alert-success {
+  background-color: greenyellow;
+  border: 1px darkgreen solid;
+  color: green;
+}
+.alert-fail {
+  background-color: lightpink;
+  border: 1px darkgoldenrod solid;
+  color: red;
+}

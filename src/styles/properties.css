@@ -1,0 +1,7 @@
+.properties {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: lightgrey;
+  color: darkolivegreen;
+}
