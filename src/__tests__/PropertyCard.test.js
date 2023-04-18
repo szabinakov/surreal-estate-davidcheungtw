@@ -5,55 +5,38 @@ import PropertyCard from "../components/PropertyCard";
 
 describe("PropertyCard", () => {
   const validProps = {
-    properties: [
-      {
-        _id: "643a793b396cf20f05fb487c",
-        title: "title001",
-        type: "Flat",
-        bedrooms: "1",
-        bathrooms: "1",
-        price: "1000",
-        city: "Manchester",
-        email: "joe@mcr.codes",
-        __v: 0,
-      },
-      {
-        _id: "643a795a396cf24c7cfb487e",
-        title: "title002",
-        type: "Semi-detached",
-        bedrooms: "2",
-        bathrooms: "2",
-        price: "2000",
-        city: "Leeds",
-        email: "joe@mcr.codes",
-        __v: 0,
-      },
-      {
-        _id: "643a79d1396cf25d8dfb4883",
-        title: "title003",
-        type: "Detached",
-        bedrooms: "3",
-        bathrooms: "3",
-        price: "3000",
-        city: "Liverpool",
-        email: "joe@mcr.codes",
-        __v: 0,
-      },
-    ],
+    property: {
+      _id: "643a793b396cf20f05fb487c",
+      title: "title001",
+      type: "Flat",
+      bedrooms: "1",
+      bathrooms: "1",
+      price: "1000",
+      city: "Manchester",
+      email: "joe@mcr.codes",
+      __v: 0,
+    },
   };
 
   it("Renders as expected", () => {
     const rendered = renderer.create(
-      <PropertyCard properties={validProps.properties} />
+      <PropertyCard key={validProps._id} {...validProps.property} />
     );
 
     expect(rendered).toMatchSnapshot();
   });
 
-  it("Assert 3 properties are present", () => {
-    render(<PropertyCard properties={validProps.properties} />);
-    const items = screen.getAllByTestId("property-one-card");
+  it("Assert one property present", () => {
+    const { container } = render(
+      <PropertyCard key={validProps._id} {...validProps.property} />
+    );
+    const liElements = container.querySelectorAll("li");
 
-    expect(items).toHaveLength(3);
+    expect(liElements).toHaveLength(6);
+    expect(liElements[0]).toHaveTextContent("title001");
+    expect(liElements[1]).toHaveTextContent("Flat - Manchester");
+    expect(liElements[4]).toHaveTextContent("1,000.00");
+    const emailElement = liElements[5].querySelector("a");
+    expect(emailElement).toHaveAttribute("href", "mailto:joe@mcr.codes");
   });
 });

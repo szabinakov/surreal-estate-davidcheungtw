@@ -113,7 +113,7 @@ exports[`AddProperty Renders as expected 1`] = `
         name="price"
         onChange={[Function]}
         placeholder="0"
-        step="1000"
+        step="100"
         type="number"
         value={0}
       />

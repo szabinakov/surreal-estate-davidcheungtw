@@ -143,7 +143,7 @@ const AddProperty = () => {
             value={fields.price}
             onChange={handleFieldChange}
             placeholder="0"
-            step="1000"
+            step="100"
             min="0"
           />
         </label>

@@ -4,9 +4,7 @@ exports[`PropertyCard Renders as expected 1`] = `
 <div
   className="property-card"
 >
-  <ul
-    data-testid="property-one-card"
-  >
+  <ul>
     <li>
       title001
     </li>
@@ -61,9 +59,7 @@ exports[`PropertyCard Renders as expected 1`] = `
     </li>
     <li>
       £
-       
       1,000.00
-       
     </li>
     <li
       className="property-card-email"
@@ -71,187 +67,6 @@ exports[`PropertyCard Renders as expected 1`] = `
       <a
         href="mailto:joe@mcr.codes"
       >
-         
-        <svg
-          fill="currentColor"
-          height="1em"
-          stroke="currentColor"
-          strokeWidth="0"
-          style={
-            Object {
-              "color": undefined,
-            }
-          }
-          viewBox="0 0 1024 1024"
-          width="1em"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M1023.46 232a31.629 31.629 0 0 0-2.48-18.271C1012.917 178.288 987.3 160 944.005 160h-832c-38.08 0-79.105 14-99.28 41.472-1.745 1.328-3.409 2.832-4.912 4.576-6.449 7.44-8.705 17.009-7.264 26.033-.288 2.592-.544 5.2-.544 7.92v512c0 53.024 58.992 112 112 112h832c53.024 0 80-58.976 80-112v-512c0-2.832-.368-5.313-.544-8.001zm-911.459-8l832.001-.001h.432L512.002 568.655 81.314 225.407C91.106 223.599 103.154 224 112 224zm832.001 575.999H112.003c-17.648 0-48-30.336-48-48V293.551l427.04 341.648c6.016 5.2 13.487 7.792 20.959 7.792a32.046 32.046 0 0 0 20.976-7.792l427.024-341.632v458.432c0 17.664 1.664 48-16 48z"
-          />
-        </svg>
-         Email
-      </a>
-    </li>
-  </ul>
-  <ul
-    data-testid="property-one-card"
-  >
-    <li>
-      title002
-    </li>
-    <li
-      className="property-card-type"
-    >
-      Semi-detached
-       - 
-      Leeds
-    </li>
-    <li>
-      <svg
-        fill="currentColor"
-        height="1em"
-        stroke="currentColor"
-        strokeWidth="0"
-        style={
-          Object {
-            "color": undefined,
-          }
-        }
-        viewBox="0 0 512 512"
-        width="1em"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M32,384a95.4,95.4,0,0,0,32,71.09V496a16,16,0,0,0,16,16h32a16,16,0,0,0,16-16V480H384v16a16,16,0,0,0,16,16h32a16,16,0,0,0,16-16V455.09A95.4,95.4,0,0,0,480,384V336H32ZM496,256H80V69.25a21.26,21.26,0,0,1,36.28-15l19.27,19.26c-13.13,29.88-7.61,59.11,8.62,79.73l-.17.17A16,16,0,0,0,144,176l11.31,11.31a16,16,0,0,0,22.63,0L283.31,81.94a16,16,0,0,0,0-22.63L272,48a16,16,0,0,0-22.62,0l-.17.17c-20.62-16.23-49.83-21.75-79.73-8.62L150.22,20.28A69.25,69.25,0,0,0,32,69.25V256H16A16,16,0,0,0,0,272v16a16,16,0,0,0,16,16H496a16,16,0,0,0,16-16V272A16,16,0,0,0,496,256Z"
-        />
-      </svg>
-      2
-    </li>
-    <li>
-      <svg
-        fill="currentColor"
-        height="1em"
-        stroke="currentColor"
-        strokeWidth="0"
-        style={
-          Object {
-            "color": undefined,
-          }
-        }
-        viewBox="0 0 640 512"
-        width="1em"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M176 256c44.11 0 80-35.89 80-80s-35.89-80-80-80-80 35.89-80 80 35.89 80 80 80zm352-128H304c-8.84 0-16 7.16-16 16v144H64V80c0-8.84-7.16-16-16-16H16C7.16 64 0 71.16 0 80v352c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16v-48h512v48c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16V240c0-61.86-50.14-112-112-112z"
-        />
-      </svg>
-      2
-    </li>
-    <li>
-      £
-       
-      2,000.00
-       
-    </li>
-    <li
-      className="property-card-email"
-    >
-      <a
-        href="mailto:joe@mcr.codes"
-      >
-         
-        <svg
-          fill="currentColor"
-          height="1em"
-          stroke="currentColor"
-          strokeWidth="0"
-          style={
-            Object {
-              "color": undefined,
-            }
-          }
-          viewBox="0 0 1024 1024"
-          width="1em"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M1023.46 232a31.629 31.629 0 0 0-2.48-18.271C1012.917 178.288 987.3 160 944.005 160h-832c-38.08 0-79.105 14-99.28 41.472-1.745 1.328-3.409 2.832-4.912 4.576-6.449 7.44-8.705 17.009-7.264 26.033-.288 2.592-.544 5.2-.544 7.92v512c0 53.024 58.992 112 112 112h832c53.024 0 80-58.976 80-112v-512c0-2.832-.368-5.313-.544-8.001zm-911.459-8l832.001-.001h.432L512.002 568.655 81.314 225.407C91.106 223.599 103.154 224 112 224zm832.001 575.999H112.003c-17.648 0-48-30.336-48-48V293.551l427.04 341.648c6.016 5.2 13.487 7.792 20.959 7.792a32.046 32.046 0 0 0 20.976-7.792l427.024-341.632v458.432c0 17.664 1.664 48-16 48z"
-          />
-        </svg>
-         Email
-      </a>
-    </li>
-  </ul>
-  <ul
-    data-testid="property-one-card"
-  >
-    <li>
-      title003
-    </li>
-    <li
-      className="property-card-type"
-    >
-      Detached
-       - 
-      Liverpool
-    </li>
-    <li>
-      <svg
-        fill="currentColor"
-        height="1em"
-        stroke="currentColor"
-        strokeWidth="0"
-        style={
-          Object {
-            "color": undefined,
-          }
-        }
-        viewBox="0 0 512 512"
-        width="1em"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M32,384a95.4,95.4,0,0,0,32,71.09V496a16,16,0,0,0,16,16h32a16,16,0,0,0,16-16V480H384v16a16,16,0,0,0,16,16h32a16,16,0,0,0,16-16V455.09A95.4,95.4,0,0,0,480,384V336H32ZM496,256H80V69.25a21.26,21.26,0,0,1,36.28-15l19.27,19.26c-13.13,29.88-7.61,59.11,8.62,79.73l-.17.17A16,16,0,0,0,144,176l11.31,11.31a16,16,0,0,0,22.63,0L283.31,81.94a16,16,0,0,0,0-22.63L272,48a16,16,0,0,0-22.62,0l-.17.17c-20.62-16.23-49.83-21.75-79.73-8.62L150.22,20.28A69.25,69.25,0,0,0,32,69.25V256H16A16,16,0,0,0,0,272v16a16,16,0,0,0,16,16H496a16,16,0,0,0,16-16V272A16,16,0,0,0,496,256Z"
-        />
-      </svg>
-      3
-    </li>
-    <li>
-      <svg
-        fill="currentColor"
-        height="1em"
-        stroke="currentColor"
-        strokeWidth="0"
-        style={
-          Object {
-            "color": undefined,
-          }
-        }
-        viewBox="0 0 640 512"
-        width="1em"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M176 256c44.11 0 80-35.89 80-80s-35.89-80-80-80-80 35.89-80 80 35.89 80 80 80zm352-128H304c-8.84 0-16 7.16-16 16v144H64V80c0-8.84-7.16-16-16-16H16C7.16 64 0 71.16 0 80v352c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16v-48h512v48c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16V240c0-61.86-50.14-112-112-112z"
-        />
-      </svg>
-      3
-    </li>
-    <li>
-      £
-       
-      3,000.00
-       
-    </li>
-    <li
-      className="property-card-email"
-    >
-      <a
-        href="mailto:joe@mcr.codes"
-      >
-         
         <svg
           fill="currentColor"
           height="1em"

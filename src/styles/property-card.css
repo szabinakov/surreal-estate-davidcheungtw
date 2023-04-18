@@ -8,15 +8,13 @@
   border: 2px lightseagreen solid;
   margin: 5px;
   padding: 0;
-  width: 200px;
+  width: 300px;
 }
 
 .property-card li {
   display: block;
   margin: 5px;
   padding: 0;
-  /* border: 2px red solid; */
-  /* width: 100%; */
 }
 
 .property-card-type {
@@ -31,4 +29,8 @@
 .property-card-email a {
   text-decoration: none;
   color: white;
+}
+
+.property-card-email a svg {
+  vertical-align: middle;
 }

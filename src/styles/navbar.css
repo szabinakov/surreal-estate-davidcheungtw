@@ -2,7 +2,7 @@
   text-align: center;
   /* background-color: lightgoldenrodyellow; */
   background-color: white;
-  border-bottom: 2px solid grey;
+  /* border-bottom: 2px solid grey; */
   display: flex;
 }
 
@@ -13,8 +13,6 @@
 }
 
 .navbar-links-item a {
-  color: blueviolet;
-  /* font-weight: bold; */
   text-decoration: none;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -32,6 +30,22 @@
   display: inline-block;
 }
 
-.navbar li:hover {
+/* .navbar li:hover {
+  background-color: lightcyan;
+} */
+
+.classVP {
   background-color: rgba(0, 0, 0, 0.2);
+}
+
+.classVP a {
+  color: white;
+}
+
+.classAP {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.classAP a {
+  color: white;
 }

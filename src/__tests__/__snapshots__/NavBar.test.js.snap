@@ -24,7 +24,7 @@ exports[`NavBar Renders as expected 1`] = `
       </a>
     </li>
     <li
-      className="navbar-links-item"
+      className="navbar-links-item undefined"
     >
       <a
         className="item"
