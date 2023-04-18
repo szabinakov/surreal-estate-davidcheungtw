@@ -1,0 +1,24 @@
+.side-bar-links {
+  text-align: center;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.side-bar-links-item a {
+  text-decoration: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.side-bar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.side-bar li {
+  margin: 0;
+  padding: 20px;
+  display: inline-block;
+}

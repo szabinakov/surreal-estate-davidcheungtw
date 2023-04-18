@@ -4,8 +4,75 @@ exports[`Properties Renders as expected 1`] = `
 <div
   className="properties"
 >
-  <h3>
-    Properties Page
-  </h3>
+  <div
+    className="column left"
+  >
+    <div
+      className="side-bar"
+    >
+      <ul
+        className="side-bar-links"
+      >
+        <li
+          className="side-bar-links-item"
+        >
+          <a
+            className="item"
+            href="/"
+            onClick={[Function]}
+          >
+            All
+          </a>
+        </li>
+        <li
+          className="side-bar-links-item"
+        >
+          <a
+            className="item"
+            href="/?query={\\"city\\": \\"Manchester\\"}"
+            onClick={[Function]}
+          >
+            Manchester
+          </a>
+        </li>
+        <li
+          className="side-bar-links-item"
+        >
+          <a
+            className="item"
+            href="/?query={\\"city\\": \\"Leeds\\"}"
+            onClick={[Function]}
+          >
+            Leeds
+          </a>
+        </li>
+        <li
+          className="side-bar-links-item"
+        >
+          <a
+            className="item"
+            href="/?query={\\"city\\": \\"Sheffield\\"}"
+            onClick={[Function]}
+          >
+            Sheffield
+          </a>
+        </li>
+        <li
+          className="side-bar-links-item"
+        >
+          <a
+            className="item"
+            href="/?query={\\"city\\": \\"Liverpool\\"}"
+            onClick={[Function]}
+          >
+            Liverpool
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div
+    className="column right"
+  />
 </div>
 `;
