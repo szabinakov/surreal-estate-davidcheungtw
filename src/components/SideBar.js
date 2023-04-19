@@ -1,12 +1,15 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import qs from "qs";
+import { SlMagnifier } from "react-icons/sl";
 import "../styles/side-bar.css";
 
 const SideBar = () => {
   const { search } = useLocation();
   const cities = ["Manchester", "Leeds", "Sheffield", "Liverpool"];
+  const [searchText, setSearchText] = useState("");
+  const navigate = useNavigate();
 
   const buildQueryString = (operation, valueObj) => {
     const currentQuery = qs.parse(search, {
@@ -14,23 +17,43 @@ const SideBar = () => {
     });
     const newQuery = {
       ...currentQuery,
-      [operation]: JSON.stringify(valueObj),
+      [operation]: JSON.stringify({
+        ...JSON.parse(currentQuery[operation] || "{}"),
+        ...valueObj,
+      }),
     };
+
     return qs.stringify(newQuery, {
       addQueryPrefix: true,
       encode: false,
     });
   };
 
+  const handleSearch = (event) => {
+    event.preventDefault();
+    const searchQuery = buildQueryString("query", {
+      title: { $regex: searchText },
+    });
+    navigate(searchQuery);
+  };
+
   return (
     <div className="side-bar">
+      <form className="search-form" onSubmit={handleSearch}>
+        <input
+          type="text"
+          id="searchText"
+          name="searchText"
+          value={searchText}
+          onChange={(e) => setSearchText(e.target.value)}
+        />
+        <button type="submit">
+          <SlMagnifier />
+        </button>
+      </form>
+
       <ul className="side-bar-links">
         <h4>Filter by City:</h4>
-        <li className="side-bar-links-item">
-          <Link className="item" to="/">
-            All
-          </Link>
-        </li>
         {cities.map((city) => (
           <li key={city} className="side-bar-links-item">
             <Link className="item" to={buildQueryString("query", { city })}>

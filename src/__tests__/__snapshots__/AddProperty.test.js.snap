@@ -16,6 +16,7 @@ exports[`AddProperty Renders as expected 1`] = `
     >
       Property Description
       <input
+        className="input-text"
         id="title"
         name="title"
         onChange={[Function]}
@@ -29,6 +30,7 @@ exports[`AddProperty Renders as expected 1`] = `
     >
       Type
       <select
+        className="select-type"
         id="type"
         name="type"
         onChange={[Function]}
@@ -76,6 +78,7 @@ exports[`AddProperty Renders as expected 1`] = `
     >
       Bedrooms
       <input
+        className="input-number"
         id="bedrooms"
         max="9"
         min="0"
@@ -92,6 +95,7 @@ exports[`AddProperty Renders as expected 1`] = `
     >
       Bathrooms
       <input
+        className="input-number"
         id="bathrooms"
         max="9"
         min="0"
@@ -108,6 +112,7 @@ exports[`AddProperty Renders as expected 1`] = `
     >
       Price
       <input
+        className="input-number"
         id="price"
         min="0"
         name="price"
@@ -123,6 +128,7 @@ exports[`AddProperty Renders as expected 1`] = `
     >
       City
       <select
+        className="select-city"
         id="city"
         name="city"
         onChange={[Function]}
@@ -155,6 +161,7 @@ exports[`AddProperty Renders as expected 1`] = `
     >
       Email
       <input
+        className="input-email"
         id="email"
         name="email"
         onChange={[Function]}
@@ -164,6 +171,7 @@ exports[`AddProperty Renders as expected 1`] = `
       />
     </label>
     <button
+      className="button-add"
       type="submit"
     >
       Add

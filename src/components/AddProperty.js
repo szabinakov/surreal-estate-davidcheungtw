@@ -93,6 +93,7 @@ const AddProperty = () => {
             value={fields.title}
             onChange={handleFieldChange}
             placeholder="2 bed flat"
+            className="input-text"
           />
         </label>
 
@@ -103,6 +104,7 @@ const AddProperty = () => {
             name="type"
             value={fields.type}
             onChange={handleFieldChange}
+            className="select-type"
           >
             {types.map((type) => (
               <option key={type} value={type}>
@@ -124,6 +126,7 @@ const AddProperty = () => {
             step="1"
             min="0"
             max="9"
+            className="input-number"
           />
         </label>
 
@@ -139,6 +142,7 @@ const AddProperty = () => {
             step="1"
             min="0"
             max="9"
+            className="input-number"
           />
         </label>
 
@@ -153,6 +157,7 @@ const AddProperty = () => {
             placeholder="0"
             step="100"
             min="0"
+            className="input-number"
           />
         </label>
 
@@ -163,6 +168,7 @@ const AddProperty = () => {
             name="city"
             value={fields.city}
             onChange={handleFieldChange}
+            className="select-city"
           >
             {cities.map((city) => (
               <option key={city} value={city}>
@@ -181,10 +187,13 @@ const AddProperty = () => {
             value={fields.email}
             onChange={handleFieldChange}
             placeholder="john.smith@email.co.uk"
+            className="input-email"
           />
         </label>
 
-        <button type="submit">Add</button>
+        <button type="submit" className="button-add">
+          Add
+        </button>
       </form>
     </div>
   );
