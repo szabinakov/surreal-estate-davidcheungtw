@@ -20,6 +20,7 @@ const Properties = () => {
     <div className="properties">
       {/* <h3>Properties Page</h3> */}
       <div className="column left">
+        {/* <SideBar search={search} /> */}
         <SideBar />
       </div>
       <div className="column right">

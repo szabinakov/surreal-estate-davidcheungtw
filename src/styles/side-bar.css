@@ -1,5 +1,4 @@
 .side-bar-links {
-  text-align: center;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -19,6 +18,6 @@
 
 .side-bar li {
   margin: 0;
-  padding: 20px;
+  padding: 10px;
   display: inline-block;
 }

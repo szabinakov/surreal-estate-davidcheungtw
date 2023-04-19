@@ -5,6 +5,16 @@ import axios from "axios";
 import "../styles/add-property.css";
 
 const AddProperty = () => {
+  const cities = ["Manchester", "Leeds", "Sheffield", "Liverpool"];
+  const types = [
+    "Flat",
+    "Detached",
+    "Semi-Detached",
+    "Terraced",
+    "End of Terrace",
+    "Cottage",
+    "Bungalow",
+  ];
   const initialState = {
     fields: {
       title: "",
@@ -94,13 +104,11 @@ const AddProperty = () => {
             value={fields.type}
             onChange={handleFieldChange}
           >
-            <option value="Flat">Flat</option>
-            <option value="Detached">Detached</option>
-            <option value="Semi-Detached">Semi-Detached</option>
-            <option value="Terraced">Terraced</option>
-            <option value="End of Terrace">End of Terrace</option>
-            <option value="Cottage">Cottage</option>
-            <option value="Bungalow">Bungalow</option>
+            {types.map((type) => (
+              <option key={type} value={type}>
+                {type}
+              </option>
+            ))}
           </select>
         </label>
 
@@ -156,10 +164,11 @@ const AddProperty = () => {
             value={fields.city}
             onChange={handleFieldChange}
           >
-            <option value="Manchester">Manchester</option>
-            <option value="Leeds">Leeds</option>
-            <option value="Sheffield">Sheffield</option>
-            <option value="Liverpool">Liverpool</option>
+            {cities.map((city) => (
+              <option key={city} value={city}>
+                {city}
+              </option>
+            ))}
           </select>
         </label>
 

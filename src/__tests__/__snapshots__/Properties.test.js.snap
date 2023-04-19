@@ -13,6 +13,9 @@ exports[`Properties Renders as expected 1`] = `
       <ul
         className="side-bar-links"
       >
+        <h4>
+          Filter by City:
+        </h4>
         <li
           className="side-bar-links-item"
         >
@@ -29,7 +32,7 @@ exports[`Properties Renders as expected 1`] = `
         >
           <a
             className="item"
-            href="/?query={\\"city\\": \\"Manchester\\"}"
+            href="/?query={\\"city\\":\\"Manchester\\"}"
             onClick={[Function]}
           >
             Manchester
@@ -40,7 +43,7 @@ exports[`Properties Renders as expected 1`] = `
         >
           <a
             className="item"
-            href="/?query={\\"city\\": \\"Leeds\\"}"
+            href="/?query={\\"city\\":\\"Leeds\\"}"
             onClick={[Function]}
           >
             Leeds
@@ -51,7 +54,7 @@ exports[`Properties Renders as expected 1`] = `
         >
           <a
             className="item"
-            href="/?query={\\"city\\": \\"Sheffield\\"}"
+            href="/?query={\\"city\\":\\"Sheffield\\"}"
             onClick={[Function]}
           >
             Sheffield
@@ -62,10 +65,35 @@ exports[`Properties Renders as expected 1`] = `
         >
           <a
             className="item"
-            href="/?query={\\"city\\": \\"Liverpool\\"}"
+            href="/?query={\\"city\\":\\"Liverpool\\"}"
             onClick={[Function]}
           >
             Liverpool
+          </a>
+        </li>
+        <h4>
+          Sort by:
+        </h4>
+        <li
+          className="side-bar-links-item"
+        >
+          <a
+            className="item"
+            href="/?sort={\\"price\\":1}"
+            onClick={[Function]}
+          >
+            Price Ascending
+          </a>
+        </li>
+        <li
+          className="side-bar-links-item"
+        >
+          <a
+            className="item"
+            href="/?sort={\\"price\\":-1}"
+            onClick={[Function]}
+          >
+            Price Descending
           </a>
         </li>
       </ul>
