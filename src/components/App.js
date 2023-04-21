@@ -8,6 +8,7 @@ import "../styles/app.css";
 const App = () => {
   const location = useLocation();
   const [menu, setMenu] = useState("classVP");
+  const [userID, setUserID] = useState("");
 
   useEffect(() => {
     switch (location.pathname) {
@@ -22,10 +23,27 @@ const App = () => {
     }
   }, [location]);
 
+  const handleLogin = (response) => {
+    setUserID(response.userID);
+  };
+
+  const logoutCallback = () => {
+    setUserID("");
+  };
+
+  const handleLogout = () => {
+    window.FB.logout(logoutCallback);
+  };
+
   return (
     <div className="App">
       <h2>Surreal Estate</h2>
-      <NavBar menu={menu} />
+      <NavBar
+        menu={menu}
+        userID={userID}
+        onLogin={handleLogin}
+        onLogout={handleLogout}
+      />
       <Routes>
         <Route path="/" element={<Properties />} />
         <Route path="add-property" element={<AddProperty />} />

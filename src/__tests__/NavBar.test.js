@@ -5,7 +5,12 @@ import renderer from "react-test-renderer";
 import NavBar from "../components/NavBar";
 
 describe("NavBar", () => {
-  test("Renders as expected", () => {
+  // to solve facebook-login problem
+  const fbScript = document.createElement("script");
+  fbScript.id = "facebook-jssdk";
+  document.body.appendChild(fbScript);
+
+  it("Renders as expected", () => {
     const rendered = renderer.create(
       <MemoryRouter>
         <NavBar />
@@ -15,7 +20,7 @@ describe("NavBar", () => {
     expect(rendered).toMatchSnapshot();
   });
 
-  test("Assert View Properties", () => {
+  it("Assert View Properties", () => {
     render(
       <MemoryRouter>
         <NavBar />
@@ -27,7 +32,7 @@ describe("NavBar", () => {
     );
   });
 
-  test("Assert Add a Property", () => {
+  it("Assert Add a Property", () => {
     render(
       <MemoryRouter>
         <NavBar />

@@ -17,7 +17,7 @@ describe("Alert", () => {
     isSuccess: false,
   };
 
-  test("Renders as expected", () => {
+  it("Renders as expected", () => {
     const rendered = renderer.create(
       <Alert message={validProps1.message} isSuccess={validProps1.isSuccess} />
     );
@@ -25,7 +25,7 @@ describe("Alert", () => {
     expect(rendered).toMatchSnapshot();
   });
 
-  test("Renders as expected - error message", () => {
+  it("Renders as expected - error message", () => {
     const { getByText, asFragment } = render(
       <Alert message={validProps1.message} isSuccess={validProps1.isSuccess} />
     );
@@ -33,7 +33,7 @@ describe("Alert", () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  test("Assert error message", () => {
+  it("Assert error message", () => {
     render(
       <Alert message={validProps1.message} isSuccess={validProps1.isSuccess} />
     );
@@ -43,7 +43,7 @@ describe("Alert", () => {
     expect(screen.getByText(/Error!/i)).toHaveClass("alert-fail");
   });
 
-  test("Renders as expected - success message", () => {
+  it("Renders as expected - success message", () => {
     const { getByText, asFragment } = render(
       <Alert message={validProps2.message} isSuccess={validProps2.isSuccess} />
     );
@@ -51,7 +51,7 @@ describe("Alert", () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  test("Assert success message", () => {
+  it("Assert success message", () => {
     render(
       <Alert message={validProps2.message} isSuccess={validProps2.isSuccess} />
     );
@@ -61,7 +61,7 @@ describe("Alert", () => {
     expect(screen.getByText(/Success!!!/i)).toHaveClass("alert-success");
   });
 
-  test("does not render an error or a success message if message props is empty", () => {
+  it("does not render an error or a success message if message props is empty", () => {
     const { asFragment } = render(
       <Alert message={validProps3.message} isSuccess={validProps3.isSuccess} />
     );

@@ -4,6 +4,7 @@
   background-color: white;
   /* border-bottom: 2px solid grey; */
   display: flex;
+  justify-content: space-between;
 }
 
 .navbar-logo {
@@ -48,4 +49,14 @@
 
 .classAP a {
   color: white;
+}
+
+.button-sign-out {
+  color: white;
+  font-weight: bold;
+  background-color: #3b5998;
+  padding: 20px;
+}
+
+.facebook-login {
 }

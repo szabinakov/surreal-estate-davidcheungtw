@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import FacebookLogin from "react-facebook-login";
 import logo from "../images/logo.png";
 import "../styles/navbar.css";
 
-const NavBar = ({ menu }) => {
+const NavBar = ({ menu, userID, onLogin, onLogout }) => {
   let classVP;
   let classAP;
 
@@ -17,8 +18,8 @@ const NavBar = ({ menu }) => {
 
   return (
     <div className="navbar">
-      <img src={logo} className="navbar-logo" alt="logo" />
       <ul className="navbar-links">
+        <img src={logo} className="navbar-logo" alt="logo" />
         <li className={classVP}>
           <Link className="item" to="/">
             View Properties
@@ -30,6 +31,21 @@ const NavBar = ({ menu }) => {
           </Link>
         </li>
       </ul>
+
+      <div className="facebook-login">
+        {userID ? (
+          <button type="submit" className="button-sign-out" onClick={onLogout}>
+            Sign Out
+          </button>
+        ) : (
+          <FacebookLogin
+            appId="613942867273925"
+            callback={onLogin}
+            icon="fa-facebook"
+            textButton="   Login"
+          />
+        )}
+      </div>
     </div>
   );
 };

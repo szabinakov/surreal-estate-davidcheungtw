@@ -9,13 +9,13 @@ describe("AddProperty", () => {
     jest.clearAllMocks();
   });
 
-  test("Renders as expected", () => {
+  it("Renders as expected", () => {
     const rendered = renderer.create(<AddProperty />);
 
     expect(rendered).toMatchSnapshot();
   });
 
-  test("Assert 7 inputs are present", () => {
+  it("Assert 7 inputs are present", () => {
     render(<AddProperty />);
 
     expect(screen.getAllByRole("textbox")).toHaveLength(2);
@@ -23,7 +23,7 @@ describe("AddProperty", () => {
     expect(screen.getAllByRole("spinbutton")).toHaveLength(3);
   });
 
-  test("Assert 1 button is present", () => {
+  it("Assert 1 button is present", () => {
     render(<AddProperty />);
 
     const buttons = screen.getAllByRole("button");

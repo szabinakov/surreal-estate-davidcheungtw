@@ -5,7 +5,12 @@ import renderer from "react-test-renderer";
 import App from "../components/App";
 
 describe("App", () => {
-  test("Renders as expected", () => {
+  // to solve facebook-login problem
+  const fbScript = document.createElement("script");
+  fbScript.id = "facebook-jssdk";
+  document.body.appendChild(fbScript);
+
+  it("Renders as expected", () => {
     const rendered = renderer.create(
       <Router>
         <App />
@@ -15,7 +20,7 @@ describe("App", () => {
     expect(rendered).toMatchSnapshot();
   });
 
-  test("Assert Surreal Estate Heading", () => {
+  it("Assert Surreal Estate Heading", () => {
     render(
       <Router>
         <App />

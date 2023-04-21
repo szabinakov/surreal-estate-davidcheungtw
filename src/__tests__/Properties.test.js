@@ -10,7 +10,7 @@ describe("Properties", () => {
     jest.clearAllMocks();
   });
 
-  test("Renders as expected", () => {
+  it("Renders as expected", () => {
     const rendered = renderer.create(
       <Router>
         <Properties />
