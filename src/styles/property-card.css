@@ -34,3 +34,8 @@
 .property-card-email a svg {
   vertical-align: middle;
 }
+
+.button-save {
+  width: 96%;
+  margin: 5px;
+}

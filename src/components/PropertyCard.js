@@ -6,6 +6,7 @@ import { SlEnvolope } from "react-icons/sl";
 import "../styles/property-card.css";
 
 const PropertyCard = ({
+  _id,
   title,
   bathrooms,
   bedrooms,
@@ -13,7 +14,13 @@ const PropertyCard = ({
   type,
   email,
   city,
+  userID,
+  onSaveProperty,
 }) => {
+  const handleClick = () => {
+    onSaveProperty(_id);
+  };
+
   return (
     <div className="property-card">
       <ul>
@@ -40,6 +47,11 @@ const PropertyCard = ({
             <SlEnvolope /> Email
           </a>
         </li>
+        {userID && (
+          <button type="submit" className="button-save" onClick={handleClick}>
+            Save
+          </button>
+        )}
       </ul>
     </div>
   );

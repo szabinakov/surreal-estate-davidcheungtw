@@ -45,7 +45,7 @@ const App = () => {
         onLogout={handleLogout}
       />
       <Routes>
-        <Route path="/" element={<Properties />} />
+        <Route path="/" element={<Properties userID={userID} />} />
         <Route path="add-property" element={<AddProperty />} />
       </Routes>
     </div>
