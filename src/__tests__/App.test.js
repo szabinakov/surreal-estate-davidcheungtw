@@ -19,17 +19,4 @@ describe("App", () => {
 
     expect(rendered).toMatchSnapshot();
   });
-
-  it("Assert Surreal Estate Heading", () => {
-    render(
-      <Router>
-        <App />
-      </Router>
-    );
-
-    expect(screen.getByText(/Surreal Estate/i)).toBeTruthy();
-    expect(screen.getByText(/Surreal Estate/i)).toBeInstanceOf(
-      HTMLHeadingElement
-    );
-  });
 });

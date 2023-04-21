@@ -1,5 +1,5 @@
 .side-bar-links {
-  background-color: white;
+  background-color: lightsteelblue;
   display: flex;
   flex-direction: column;
 }
@@ -7,6 +7,7 @@
 .side-bar-links-item a {
   text-decoration: none;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: darkgoldenrod;
 }
 
 .side-bar ul {

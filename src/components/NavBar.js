@@ -5,15 +5,19 @@ import logo from "../images/logo.png";
 import "../styles/navbar.css";
 
 const NavBar = ({ menu, userID, onLogin, onLogout }) => {
-  let classVP;
-  let classAP;
+  let classVP = "navbar-links-item";
+  let classAP = "navbar-links-item";
+  let classSP = "navbar-links-item";
 
-  if (menu === "classVP") {
-    classVP = `navbar-links-item ${menu}`;
-    classAP = "navbar-links-item";
-  } else {
-    classVP = "navbar-links-item";
-    classAP = `navbar-links-item ${menu}`;
+  switch (menu) {
+    case "classVP":
+      classVP = `navbar-links-item ${menu}`;
+      break;
+    case "classAP":
+      classAP = `navbar-links-item ${menu}`;
+      break;
+    default:
+      classSP = `navbar-links-item ${menu}`;
   }
 
   return (
@@ -23,6 +27,11 @@ const NavBar = ({ menu, userID, onLogin, onLogout }) => {
         <li className={classVP}>
           <Link className="item" to="/">
             View Properties
+          </Link>
+        </li>
+        <li className={classSP}>
+          <Link className="item" to="saved-properties">
+            Saved Properties
           </Link>
         </li>
         <li className={classAP}>

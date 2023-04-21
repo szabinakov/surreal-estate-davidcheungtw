@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import NavBar from "./NavBar";
 import Properties from "./Properties";
+import SavedProperties from "./SavedProperties";
 import AddProperty from "./AddProperty";
 import "../styles/app.css";
 
@@ -17,6 +18,9 @@ const App = () => {
         break;
       case "/add-property":
         setMenu("classAP");
+        break;
+      case "/saved-properties":
+        setMenu("classSP");
         break;
       default:
         setMenu("");
@@ -37,7 +41,6 @@ const App = () => {
 
   return (
     <div className="App">
-      <h2>Surreal Estate</h2>
       <NavBar
         menu={menu}
         userID={userID}
@@ -46,6 +49,10 @@ const App = () => {
       />
       <Routes>
         <Route path="/" element={<Properties userID={userID} />} />
+        <Route
+          path="saved-properties"
+          element={<SavedProperties userID={userID} />}
+        />
         <Route path="add-property" element={<AddProperty />} />
       </Routes>
     </div>

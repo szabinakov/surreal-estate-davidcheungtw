@@ -23,10 +23,7 @@ const Properties = ({ userID }) => {
       fbUserId: userID,
     };
     axios
-      .post(
-        "http://localhost:4000/api/v1/Favourite?populate=propertyListing",
-        parmObj
-      )
+      .post("http://localhost:4000/api/v1/Favourite", parmObj)
       .then(() => {
         setAlert({
           message: "Favourite added.",
@@ -61,6 +58,8 @@ const Properties = ({ userID }) => {
                   {...property}
                   userID={userID}
                   onSaveProperty={handleSaveProperty}
+                  removeProperty={null}
+                  removeId=""
                 />
               </div>
             ))}

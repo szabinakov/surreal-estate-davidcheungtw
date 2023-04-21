@@ -51,6 +51,14 @@
   color: white;
 }
 
+.classSP {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.classSP a {
+  color: white;
+}
+
 .button-sign-out {
   color: white;
   font-weight: bold;

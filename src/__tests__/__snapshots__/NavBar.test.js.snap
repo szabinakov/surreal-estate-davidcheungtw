@@ -28,6 +28,17 @@ exports[`NavBar Renders as expected 1`] = `
     >
       <a
         className="item"
+        href="/saved-properties"
+        onClick={[Function]}
+      >
+        Saved Properties
+      </a>
+    </li>
+    <li
+      className="navbar-links-item"
+    >
+      <a
+        className="item"
         href="/add-property"
         onClick={[Function]}
       >

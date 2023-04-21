@@ -4,9 +4,6 @@ exports[`App Renders as expected 1`] = `
 <div
   className="App"
 >
-  <h2>
-    Surreal Estate
-  </h2>
   <div
     className="navbar"
   >
@@ -27,6 +24,17 @@ exports[`App Renders as expected 1`] = `
           onClick={[Function]}
         >
           View Properties
+        </a>
+      </li>
+      <li
+        className="navbar-links-item"
+      >
+        <a
+          className="item"
+          href="/saved-properties"
+          onClick={[Function]}
+        >
+          Saved Properties
         </a>
       </li>
       <li

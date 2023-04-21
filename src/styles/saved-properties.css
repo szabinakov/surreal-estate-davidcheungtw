@@ -1,0 +1,14 @@
+.saved-properties {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: lightgrey;
+  color: darkolivegreen;
+}
+
+.saved-properties > .item {
+  display: inline-block;
+  width: 33.33%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}

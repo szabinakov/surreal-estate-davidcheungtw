@@ -16,9 +16,15 @@ const PropertyCard = ({
   city,
   userID,
   onSaveProperty,
+  removeProperty,
+  removeId,
 }) => {
-  const handleClick = () => {
+  const handleSave = () => {
     onSaveProperty(_id);
+  };
+
+  const handleRemove = () => {
+    removeProperty(removeId);
   };
 
   return (
@@ -47,9 +53,18 @@ const PropertyCard = ({
             <SlEnvolope /> Email
           </a>
         </li>
-        {userID && (
-          <button type="submit" className="button-save" onClick={handleClick}>
+        {userID && onSaveProperty && (
+          <button type="submit" className="button-save" onClick={handleSave}>
             Save
+          </button>
+        )}
+        {userID && removeProperty && (
+          <button
+            type="submit"
+            className="button-remove"
+            onClick={handleRemove}
+          >
+            Remove
           </button>
         )}
       </ul>
