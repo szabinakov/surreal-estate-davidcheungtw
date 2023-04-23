@@ -3,6 +3,7 @@ import React from "react";
 import { FaBath, FaBed } from "react-icons/fa";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { SlEnvolope } from "react-icons/sl";
+import PropTypes from "prop-types";
 import "../styles/property-card.css";
 
 const PropertyCard = ({
@@ -53,12 +54,12 @@ const PropertyCard = ({
             <SlEnvolope /> Email
           </a>
         </li>
-        {userID && onSaveProperty && (
+        {!removeId && (
           <button type="submit" className="button-save" onClick={handleSave}>
             Save
           </button>
         )}
-        {userID && removeProperty && (
+        {removeId && (
           <button
             type="submit"
             className="button-remove"
@@ -73,3 +74,18 @@ const PropertyCard = ({
 };
 
 export default PropertyCard;
+
+PropertyCard.propTypes = {
+  _id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  bathrooms: PropTypes.string.isRequired,
+  bedrooms: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  city: PropTypes.string.isRequired,
+  userID: PropTypes.string.isRequired,
+  onSaveProperty: PropTypes.func.isRequired,
+  removeProperty: PropTypes.func.isRequired,
+  removeId: PropTypes.string.isRequired,
+};

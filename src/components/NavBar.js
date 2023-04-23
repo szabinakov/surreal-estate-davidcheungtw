@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import FacebookLogin from "react-facebook-login";
+import PropTypes from "prop-types";
 import logo from "../images/logo.png";
 import "../styles/navbar.css";
 
@@ -60,3 +61,10 @@ const NavBar = ({ menu, userID, onLogin, onLogout }) => {
 };
 
 export default NavBar;
+
+NavBar.propTypes = {
+  menu: PropTypes.string.isRequired,
+  userID: PropTypes.string.isRequired,
+  onLogin: PropTypes.func.isRequired,
+  onLogout: PropTypes.func.isRequired,
+};

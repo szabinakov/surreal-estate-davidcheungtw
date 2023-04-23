@@ -125,11 +125,28 @@ There are backend and frontend apps to be setup. Please note.
   npm start
   ```
 
+  Remark: If warning "Your connection is not private" is shown, please continue to processd to localhost(unsafe).
+
 - To run the tests:
 
   ```
   npm test
   ```
+
+## Problem and solution
+
+If 'npm install' surreal-estate app occurs error, please try:
+
+- edit package.json to remove "react-facebook-login": "^4.1.1","
+- delete package-lock.json file
+- delete node_modules folder
+- run:
+
+```
+npm i
+npm install react-facebook-login --force
+npm start
+```
 
 ## Author
 

@@ -5,6 +5,7 @@ import PropertyCard from "./PropertyCard";
 import getProperty from "../requests/getProperty";
 import Alert from "./Alert";
 import SideBar from "./SideBar";
+import PropTypes from "prop-types";
 import "../styles/properties.css";
 
 const Properties = ({ userID }) => {
@@ -56,7 +57,7 @@ const Properties = ({ userID }) => {
                   {...property}
                   userID={userID}
                   onSaveProperty={handleSaveProperty}
-                  removeProperty={null}
+                  removeProperty={() => {}}
                   removeId=""
                 />
               </div>
@@ -69,3 +70,7 @@ const Properties = ({ userID }) => {
 };
 
 export default Properties;
+
+Properties.propTypes = {
+  userID: PropTypes.string.isRequired,
+};
