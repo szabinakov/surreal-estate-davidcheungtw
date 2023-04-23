@@ -1,8 +1,7 @@
 .properties {
   padding: 0.5rem;
   display: flex;
-  background-color: lightgrey;
-  color: darkolivegreen;
+  color: black;
 }
 
 .properties > .item {

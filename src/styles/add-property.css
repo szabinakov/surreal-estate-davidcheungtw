@@ -2,12 +2,12 @@
   padding: 10px;
   display: flex;
   flex-direction: column;
-  background-color: lightgrey;
-  color: darkolivegreen;
+  color: black;
+  width: 400px;
 }
 
 .add-property-form {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.6);
   margin: 20px;
   padding: 20px;
   display: flex;
@@ -29,20 +29,22 @@
 .select-type,
 .select-city {
   width: 300px;
-  background-color: rgba(0, 0, 0, 0);
+  height: 30px;
   margin: 0;
   padding: 0;
   display: inline-block;
+  background-color: rgb(213, 245, 255);
+  border: 1px black solid;
 }
 
 .button-add {
   width: 300px;
-  margin: 0;
+  height: 35px;
+  margin: 0px;
   margin-top: 10px;
   cursor: pointer;
 }
 
 .button-add:hover {
-  background-color: darkgrey;
-  color: white;
+  background-color: rgb(255, 200, 152);
 }

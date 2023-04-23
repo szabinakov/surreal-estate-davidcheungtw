@@ -1,5 +1,4 @@
 .side-bar-links {
-  background-color: lightsteelblue;
   display: flex;
   flex-direction: column;
 }
@@ -7,7 +6,8 @@
 .side-bar-links-item a {
   text-decoration: none;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: darkgoldenrod;
+  color: rgb(144, 0, 227);
+  font-size: smaller;
 }
 
 .side-bar ul {
@@ -34,10 +34,23 @@
 .search-form input {
   margin: 0;
   padding: 0;
-  width: 170px;
+  width: 160px;
+  background-color: rgb(213, 245, 255);
+  border: 1px black solid;
 }
 .search-form button {
   margin: 0;
   padding: 0;
-  width: 30px;
+  width: 40px;
+}
+
+.search-form button:hover {
+  background-color: rgb(255, 200, 152);
+}
+
+.cityGroup,
+.sortGroup {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.1);
 }

@@ -49,11 +49,11 @@ const App = () => {
       />
       <Routes>
         <Route path="/" element={<Properties userID={userID} />} />
+        <Route path="add-property" element={<AddProperty />} />
         <Route
           path="saved-properties"
           element={<SavedProperties userID={userID} />}
         />
-        <Route path="add-property" element={<AddProperty />} />
       </Routes>
     </div>
   );

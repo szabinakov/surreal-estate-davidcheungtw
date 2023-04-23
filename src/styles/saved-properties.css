@@ -1,9 +1,16 @@
 .saved-properties {
   padding: 10px;
+  color: black;
+}
+
+.saved-properties h5 {
+  margin: 10px;
+  padding: 0;
+}
+
+.property-card-list {
   display: flex;
-  flex-direction: column;
-  background-color: lightgrey;
-  color: darkolivegreen;
+  flex-wrap: wrap;
 }
 
 .saved-properties > .item {

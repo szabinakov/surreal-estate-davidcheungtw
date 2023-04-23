@@ -80,8 +80,6 @@ const AddProperty = () => {
 
   return (
     <div className="add-property">
-      <h3>Add a Property</h3>
-
       <form className="add-property-form" onSubmit={handleAddProperty}>
         <Alert message={alert.message} isSuccess={alert.isSuccess} />
         <label htmlFor="title">
@@ -96,7 +94,6 @@ const AddProperty = () => {
             className="input-text"
           />
         </label>
-
         <label htmlFor="type">
           Type
           <select
@@ -113,7 +110,6 @@ const AddProperty = () => {
             ))}
           </select>
         </label>
-
         <label htmlFor="bedrooms">
           Bedrooms
           <input
@@ -129,7 +125,6 @@ const AddProperty = () => {
             className="input-number"
           />
         </label>
-
         <label htmlFor="bathrooms">
           Bathrooms
           <input
@@ -145,7 +140,6 @@ const AddProperty = () => {
             className="input-number"
           />
         </label>
-
         <label htmlFor="price">
           Price
           <input
@@ -160,7 +154,6 @@ const AddProperty = () => {
             className="input-number"
           />
         </label>
-
         <label htmlFor="city">
           City
           <select
@@ -177,7 +170,6 @@ const AddProperty = () => {
             ))}
           </select>
         </label>
-
         <label htmlFor="email">
           Email
           <input
@@ -190,7 +182,6 @@ const AddProperty = () => {
             className="input-email"
           />
         </label>
-
         <button type="submit" className="button-add">
           Add
         </button>

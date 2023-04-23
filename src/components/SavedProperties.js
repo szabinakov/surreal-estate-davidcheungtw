@@ -39,9 +39,9 @@ const SavedProperties = ({ userID }) => {
       {alert.message && (
         <Alert message={alert.message} isSuccess={alert.isSuccess} />
       )}
-      <h3> User ID : {userID}</h3>
+      <h5> User ID : {userID}</h5>
       {!alert.message && (
-        <div>
+        <div className="property-card-list">
           {properties.map((property) => (
             <div key={property._id} className="item">
               <PropertyCard

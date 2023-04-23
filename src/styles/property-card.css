@@ -2,6 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   font-size: small;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 10px;
 }
 
 .property-card ul {
@@ -40,7 +42,15 @@
   margin: 5px;
 }
 
+.button-save:hover {
+  background-color: rgb(255, 200, 152);
+}
+
 .button-remove {
   width: 96%;
   margin: 5px;
+}
+
+.button-remove:hover {
+  background-color: rgb(255, 200, 152);
 }

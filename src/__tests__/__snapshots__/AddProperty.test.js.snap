@@ -4,9 +4,6 @@ exports[`AddProperty Renders as expected 1`] = `
 <div
   className="add-property"
 >
-  <h3>
-    Add a Property
-  </h3>
   <form
     className="add-property-form"
     onSubmit={[Function]}

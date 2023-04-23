@@ -29,14 +29,14 @@ const NavBar = ({ menu, userID, onLogin, onLogout }) => {
             View Properties
           </Link>
         </li>
-        <li className={classSP}>
-          <Link className="item" to="saved-properties">
-            Saved Properties
-          </Link>
-        </li>
         <li className={classAP}>
           <Link className="item" to="add-property">
             Add a Property
+          </Link>
+        </li>
+        <li className={classSP}>
+          <Link className="item" to="saved-properties">
+            Saved Properties
           </Link>
         </li>
       </ul>

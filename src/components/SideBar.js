@@ -51,27 +51,32 @@ const SideBar = () => {
           <SlMagnifier />
         </button>
       </form>
-
       <ul className="side-bar-links">
-        <h4>Filter by City:</h4>
-        {cities.map((city) => (
-          <li key={city} className="side-bar-links-item">
-            <Link className="item" to={buildQueryString("query", { city })}>
-              {city}
+        <h5>Filter by City:</h5>
+
+        <div className="cityGroup">
+          {cities.map((city) => (
+            <li key={city} className="side-bar-links-item">
+              <Link className="item" to={buildQueryString("query", { city })}>
+                {city}
+              </Link>
+            </li>
+          ))}
+        </div>
+
+        <h5>Sort by:</h5>
+        <div className="sortGroup">
+          <li className="side-bar-links-item">
+            <Link className="item" to={buildQueryString("sort", { price: 1 })}>
+              Price Ascending
             </Link>
           </li>
-        ))}
-        <h4>Sort by:</h4>
-        <li className="side-bar-links-item">
-          <Link className="item" to={buildQueryString("sort", { price: 1 })}>
-            Price Ascending
-          </Link>
-        </li>
-        <li className="side-bar-links-item">
-          <Link className="item" to={buildQueryString("sort", { price: -1 })}>
-            Price Descending
-          </Link>
-        </li>
+          <li className="side-bar-links-item">
+            <Link className="item" to={buildQueryString("sort", { price: -1 })}>
+              Price Descending
+            </Link>
+          </li>
+        </div>
       </ul>
     </div>
   );

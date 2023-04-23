@@ -4,12 +4,14 @@
   padding: 5px;
 }
 .alert-success {
-  background-color: greenyellow;
-  border: 1px darkgreen solid;
-  color: green;
+  /* background-color: greenyellow; */
+  background-image: linear-gradient(to right, greenyellow, white);
+  border: 0;
+  color: black;
 }
 .alert-fail {
-  background-color: lightpink;
-  border: 1px darkgoldenrod solid;
-  color: red;
+  /* background-color: lightpink; */
+  background-image: linear-gradient(to right, lightpink, white);
+  border: 0;
+  color: black;
 }

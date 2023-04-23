@@ -31,10 +31,10 @@ exports[`App Renders as expected 1`] = `
       >
         <a
           className="item"
-          href="/saved-properties"
+          href="/add-property"
           onClick={[Function]}
         >
-          Saved Properties
+          Add a Property
         </a>
       </li>
       <li
@@ -42,10 +42,10 @@ exports[`App Renders as expected 1`] = `
       >
         <a
           className="item"
-          href="/add-property"
+          href="/saved-properties"
           onClick={[Function]}
         >
-          Add a Property
+          Saved Properties
         </a>
       </li>
     </ul>
@@ -135,78 +135,86 @@ exports[`App Renders as expected 1`] = `
         <ul
           className="side-bar-links"
         >
-          <h4>
+          <h5>
             Filter by City:
-          </h4>
-          <li
-            className="side-bar-links-item"
+          </h5>
+          <div
+            className="cityGroup"
           >
-            <a
-              className="item"
-              href="/?query={\\"city\\":\\"Manchester\\"}"
-              onClick={[Function]}
+            <li
+              className="side-bar-links-item"
             >
-              Manchester
-            </a>
-          </li>
-          <li
-            className="side-bar-links-item"
-          >
-            <a
-              className="item"
-              href="/?query={\\"city\\":\\"Leeds\\"}"
-              onClick={[Function]}
+              <a
+                className="item"
+                href="/?query={\\"city\\":\\"Manchester\\"}"
+                onClick={[Function]}
+              >
+                Manchester
+              </a>
+            </li>
+            <li
+              className="side-bar-links-item"
             >
-              Leeds
-            </a>
-          </li>
-          <li
-            className="side-bar-links-item"
-          >
-            <a
-              className="item"
-              href="/?query={\\"city\\":\\"Sheffield\\"}"
-              onClick={[Function]}
+              <a
+                className="item"
+                href="/?query={\\"city\\":\\"Leeds\\"}"
+                onClick={[Function]}
+              >
+                Leeds
+              </a>
+            </li>
+            <li
+              className="side-bar-links-item"
             >
-              Sheffield
-            </a>
-          </li>
-          <li
-            className="side-bar-links-item"
-          >
-            <a
-              className="item"
-              href="/?query={\\"city\\":\\"Liverpool\\"}"
-              onClick={[Function]}
+              <a
+                className="item"
+                href="/?query={\\"city\\":\\"Sheffield\\"}"
+                onClick={[Function]}
+              >
+                Sheffield
+              </a>
+            </li>
+            <li
+              className="side-bar-links-item"
             >
-              Liverpool
-            </a>
-          </li>
-          <h4>
+              <a
+                className="item"
+                href="/?query={\\"city\\":\\"Liverpool\\"}"
+                onClick={[Function]}
+              >
+                Liverpool
+              </a>
+            </li>
+          </div>
+          <h5>
             Sort by:
-          </h4>
-          <li
-            className="side-bar-links-item"
+          </h5>
+          <div
+            className="sortGroup"
           >
-            <a
-              className="item"
-              href="/?sort={\\"price\\":1}"
-              onClick={[Function]}
+            <li
+              className="side-bar-links-item"
             >
-              Price Ascending
-            </a>
-          </li>
-          <li
-            className="side-bar-links-item"
-          >
-            <a
-              className="item"
-              href="/?sort={\\"price\\":-1}"
-              onClick={[Function]}
+              <a
+                className="item"
+                href="/?sort={\\"price\\":1}"
+                onClick={[Function]}
+              >
+                Price Ascending
+              </a>
+            </li>
+            <li
+              className="side-bar-links-item"
             >
-              Price Descending
-            </a>
-          </li>
+              <a
+                className="item"
+                href="/?sort={\\"price\\":-1}"
+                onClick={[Function]}
+              >
+                Price Descending
+              </a>
+            </li>
+          </div>
         </ul>
       </div>
     </div>

@@ -3,8 +3,7 @@
 exports[`Alert Renders as expected - error message 1`] = `
 <DocumentFragment>
   <div
-    class="alert alert-fail
-    "
+    class="alert alert-fail"
   >
     Error!
   </div>
@@ -14,8 +13,7 @@ exports[`Alert Renders as expected - error message 1`] = `
 exports[`Alert Renders as expected - success message 1`] = `
 <DocumentFragment>
   <div
-    class="alert alert-success
-    "
+    class="alert alert-success"
   >
     Success!!!
   </div>
@@ -24,8 +22,7 @@ exports[`Alert Renders as expected - success message 1`] = `
 
 exports[`Alert Renders as expected 1`] = `
 <div
-  className="alert alert-fail
-    "
+  className="alert alert-fail"
 >
   Error!
 </div>

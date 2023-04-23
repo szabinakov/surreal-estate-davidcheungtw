@@ -1,10 +1,8 @@
 .navbar {
   text-align: center;
-  /* background-color: lightgoldenrodyellow; */
-  background-color: white;
-  /* border-bottom: 2px solid grey; */
   display: flex;
   justify-content: space-between;
+  background-color: white;
 }
 
 .navbar-logo {
@@ -31,32 +29,16 @@
   display: inline-block;
 }
 
-/* .navbar li:hover {
-  background-color: lightcyan;
-} */
-
 .classVP {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.classVP a {
-  color: white;
+  font-weight: bolder;
 }
 
 .classAP {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.classAP a {
-  color: white;
+  font-weight: bolder;
 }
 
 .classSP {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.classSP a {
-  color: white;
+  font-weight: bolder;
 }
 
 .button-sign-out {
@@ -64,7 +46,4 @@
   font-weight: bold;
   background-color: #3b5998;
   padding: 20px;
-}
-
-.facebook-login {
 }

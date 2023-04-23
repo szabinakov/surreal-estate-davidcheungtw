@@ -5,8 +5,7 @@ const Alert = ({ message, isSuccess }) => {
   if (!message) return null;
   return (
     <div
-      className={`${isSuccess ? "alert alert-success" : "alert alert-fail"}
-    `}
+      className={`${isSuccess ? "alert alert-success" : "alert alert-fail"}`}
     >
       {message}
     </div>

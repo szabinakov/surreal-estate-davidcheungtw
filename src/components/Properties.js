@@ -40,9 +40,7 @@ const Properties = ({ userID }) => {
 
   return (
     <div className="properties">
-      {/* <h3>Properties Page</h3> */}
       <div className="column left">
-        {/* <SideBar search={search} /> */}
         <SideBar />
       </div>
       <div className="column right">
@@ -50,7 +48,7 @@ const Properties = ({ userID }) => {
           <Alert message={alert.message} isSuccess={alert.isSuccess} />
         )}
         {!alert.message && properties.length > 0 && (
-          <>
+          <div className="property-card-list">
             {properties.map((property) => (
               <div key={property._id} className="item">
                 <PropertyCard
@@ -63,7 +61,7 @@ const Properties = ({ userID }) => {
                 />
               </div>
             ))}
-          </>
+          </div>
         )}
       </div>
     </div>
