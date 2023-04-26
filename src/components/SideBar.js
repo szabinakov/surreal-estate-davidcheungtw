@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import qs from "qs";

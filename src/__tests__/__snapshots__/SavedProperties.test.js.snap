@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SavedProperties Renders as expected 1`] = `
+<div
+  className="saved-properties"
+>
+  <h5>
+     User ID : 
+    111222333444
+  </h5>
+  <div
+    className="property-card-list"
+  />
+</div>
+`;

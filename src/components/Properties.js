@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
+import PropTypes from "prop-types";
 import PropertyCard from "./PropertyCard";
 import getProperty from "../requests/getProperty";
 import Alert from "./Alert";
 import SideBar from "./SideBar";
-import PropTypes from "prop-types";
 import "../styles/properties.css";
 
 const Properties = ({ userID }) => {

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import Alert from "./Alert";
-// eslint-disable-next-line import/order
 import axios from "axios";
+import Alert from "./Alert";
 import "../styles/add-property.css";
 
 const AddProperty = () => {

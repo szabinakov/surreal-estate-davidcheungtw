@@ -6,6 +6,10 @@ import axios from "axios";
 import Properties from "../components/Properties";
 
 describe("Properties", () => {
+  const validProps = {
+    userID: "111222333444",
+  };
+
   beforeEach(() => {
     jest.clearAllMocks();
   });
@@ -13,7 +17,7 @@ describe("Properties", () => {
   it("Renders as expected", () => {
     const rendered = renderer.create(
       <Router>
-        <Properties />
+        <Properties userID={validProps.userID} />
       </Router>
     );
 
@@ -61,7 +65,7 @@ describe("Properties", () => {
     jest.spyOn(axios, "get").mockResolvedValue(mAxiosResponse);
     render(
       <Router>
-        <Properties />
+        <Properties userID={validProps.userID} />
       </Router>
     );
 

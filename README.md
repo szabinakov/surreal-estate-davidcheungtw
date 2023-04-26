@@ -137,7 +137,7 @@ There are backend and frontend apps to be setup. Please note.
 
 If 'npm install' surreal-estate app occurs error, please try:
 
-- edit package.json to remove "react-facebook-login": "^4.1.1","
+- edit package.json to remove "react-facebook-login"
 - delete package-lock.json file
 - delete node_modules folder
 - run:

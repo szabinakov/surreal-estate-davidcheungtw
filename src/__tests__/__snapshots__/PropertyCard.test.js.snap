@@ -88,13 +88,6 @@ exports[`PropertyCard Renders as expected 1`] = `
          Email
       </a>
     </li>
-    <button
-      className="button-save"
-      onClick={[Function]}
-      type="submit"
-    >
-      Save
-    </button>
   </ul>
 </div>
 `;

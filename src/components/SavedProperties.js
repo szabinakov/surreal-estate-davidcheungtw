@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import PropTypes from "prop-types";
 import Alert from "./Alert";
 import PropertyCard from "./PropertyCard";
-import PropTypes from "prop-types";
 import getSavedProperties from "../requests/getSavedProperties";
 import "../styles/saved-properties.css";
 

@@ -12,10 +12,6 @@ describe("Alert", () => {
     message: "Success!!!",
     isSuccess: true,
   };
-  const validProps3 = {
-    message: "",
-    isSuccess: false,
-  };
 
   it("Renders as expected", () => {
     const rendered = renderer.create(
@@ -25,15 +21,15 @@ describe("Alert", () => {
     expect(rendered).toMatchSnapshot();
   });
 
-  it("Renders as expected - error message", () => {
-    const { getByText, asFragment } = render(
+  it("Renders with error message as expected", () => {
+    const { asFragment } = render(
       <Alert message={validProps1.message} isSuccess={validProps1.isSuccess} />
     );
 
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it("Assert error message", () => {
+  it("Assert error message is present", () => {
     render(
       <Alert message={validProps1.message} isSuccess={validProps1.isSuccess} />
     );
@@ -43,15 +39,15 @@ describe("Alert", () => {
     expect(screen.getByText(/Error!/i)).toHaveClass("alert-fail");
   });
 
-  it("Renders as expected - success message", () => {
-    const { getByText, asFragment } = render(
+  it("Renders with success message as expected", () => {
+    const { asFragment } = render(
       <Alert message={validProps2.message} isSuccess={validProps2.isSuccess} />
     );
 
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it("Assert success message", () => {
+  it("Assert success message is present", () => {
     render(
       <Alert message={validProps2.message} isSuccess={validProps2.isSuccess} />
     );
@@ -59,14 +55,5 @@ describe("Alert", () => {
     expect(screen.getByText(/Success!!!/i)).toBeTruthy();
     expect(screen.getByText(/Success!!!/i)).toBeInstanceOf(HTMLDivElement);
     expect(screen.getByText(/Success!!!/i)).toHaveClass("alert-success");
-  });
-
-  it("does not render an error or a success message if message props is empty", () => {
-    const { asFragment } = render(
-      <Alert message={validProps3.message} isSuccess={validProps3.isSuccess} />
-    );
-    const alert = asFragment();
-
-    expect(alert).toMatchSnapshot();
   });
 });

@@ -5,7 +5,6 @@ import renderer from "react-test-renderer";
 import NavBar from "../components/NavBar";
 
 describe("NavBar", () => {
-  // to solve facebook-login problem
   const fbScript = document.createElement("script");
   fbScript.id = "facebook-jssdk";
   document.body.appendChild(fbScript);
@@ -20,27 +19,24 @@ describe("NavBar", () => {
     expect(rendered).toMatchSnapshot();
   });
 
-  it("Assert View Properties", () => {
+  it("Assert all menu bar selections", () => {
     render(
       <MemoryRouter>
         <NavBar />
       </MemoryRouter>
     );
+    const img = screen.getByRole("img");
 
+    expect(img).toBeInstanceOf(HTMLImageElement);
     expect(screen.getByText(/View Properties/i)).toBeInstanceOf(
       HTMLAnchorElement
     );
-  });
-
-  it("Assert Add a Property", () => {
-    render(
-      <MemoryRouter>
-        <NavBar />
-      </MemoryRouter>
-    );
-
     expect(screen.getByText(/Add a Property/i)).toBeInstanceOf(
       HTMLAnchorElement
     );
+    expect(screen.getByText(/Saved Properties/i)).toBeInstanceOf(
+      HTMLAnchorElement
+    );
+    expect(screen.getByText(/Login/i)).toBeInstanceOf(HTMLButtonElement);
   });
 });

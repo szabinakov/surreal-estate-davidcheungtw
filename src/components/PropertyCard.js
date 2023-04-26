@@ -1,7 +1,5 @@
 import React from "react";
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { FaBath, FaBed } from "react-icons/fa";
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { SlEnvolope } from "react-icons/sl";
 import PropTypes from "prop-types";
 import "../styles/property-card.css";
@@ -54,7 +52,7 @@ const PropertyCard = ({
             <SlEnvolope /> Email
           </a>
         </li>
-        {!removeId && (
+        {userID && !removeId && (
           <button type="submit" className="button-save" onClick={handleSave}>
             Save
           </button>
