@@ -1,0 +1,226 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Renders as expected 1`] = `
+<div
+  className="App"
+>
+  <div
+    className="navbar"
+  >
+    <ul
+      className="navbar-links"
+    >
+      <img
+        alt="logo"
+        className="navbar-logo"
+        src="logo.png"
+      />
+      <li
+        className="navbar-links-item classVP"
+      >
+        <a
+          className="item"
+          href="/"
+          onClick={[Function]}
+        >
+          View Properties
+        </a>
+      </li>
+      <li
+        className="navbar-links-item"
+      >
+        <a
+          className="item"
+          href="/add-property"
+          onClick={[Function]}
+        >
+          Add a Property
+        </a>
+      </li>
+      <li
+        className="navbar-links-item"
+      >
+        <a
+          className="item"
+          href="/saved-properties"
+          onClick={[Function]}
+        >
+          Saved Properties
+        </a>
+      </li>
+    </ul>
+    <div
+      className="facebook-login"
+    >
+      <span
+        style={
+          Object {
+            "transition": "opacity 0.5s",
+          }
+        }
+      >
+        <link
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+          rel="stylesheet"
+        />
+        <button
+          className="kep-login-facebook metro"
+          onClick={[Function]}
+          type="button"
+        >
+          <i
+            className="fa fa-facebook"
+          />
+             Login
+        </button>
+        <style
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": Array [
+                Array [
+                  9,
+                  ".kep-login-facebook{font-family:Helvetica,sans-serif;font-weight:700;-webkit-font-smoothing:antialiased;color:#fff;cursor:pointer;display:inline-block;font-size:calc(.27548vw + 12.71074px);text-decoration:none;text-transform:uppercase;transition:background-color .3s,border-color .3s;background-color:#4c69ba;border:calc(.06887vw + .67769px) solid #4c69ba;padding:calc(.34435vw + 13.38843px) calc(.34435vw + 18.38843px)}.kep-login-facebook.small{padding:calc(.34435vw + 3.38843px) calc(.34435vw + 8.38843px)}.kep-login-facebook.medium{padding:calc(.34435vw + 8.38843px) calc(.34435vw + 13.38843px)}.kep-login-facebook.metro{border-radius:0}.kep-login-facebook .fa{margin-right:calc(.34435vw + 3.38843px)}",
+                  "",
+                ],
+              ],
+            }
+          }
+        />
+      </span>
+    </div>
+  </div>
+  <div
+    className="properties"
+  >
+    <div
+      className="column left"
+    >
+      <div
+        className="side-bar"
+      >
+        <form
+          className="search-form"
+          onSubmit={[Function]}
+        >
+          <input
+            id="searchText"
+            name="searchText"
+            onChange={[Function]}
+            type="text"
+            value=""
+          />
+          <button
+            type="submit"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              style={
+                Object {
+                  "color": undefined,
+                }
+              }
+              viewBox="0 0 1024 1024"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1014.64 969.04L703.71 656.207c57.952-69.408 92.88-158.704 92.88-256.208 0-220.912-179.088-400-400-400s-400 179.088-400 400 179.088 400 400 400c100.368 0 192.048-37.056 262.288-98.144l310.496 312.448c12.496 12.497 32.769 12.497 45.265 0 12.48-12.496 12.48-32.752 0-45.263zM396.59 736.527c-185.856 0-336.528-150.672-336.528-336.528S210.734 63.471 396.59 63.471c185.856 0 336.528 150.672 336.528 336.528S582.446 736.527 396.59 736.527z"
+              />
+            </svg>
+          </button>
+        </form>
+        <ul
+          className="side-bar-links"
+        >
+          <h5>
+            Filter by City:
+          </h5>
+          <div
+            className="cityGroup"
+          >
+            <li
+              className="side-bar-links-item"
+            >
+              <a
+                className="item"
+                href="/?query={\\"city\\":\\"Manchester\\"}"
+                onClick={[Function]}
+              >
+                Manchester
+              </a>
+            </li>
+            <li
+              className="side-bar-links-item"
+            >
+              <a
+                className="item"
+                href="/?query={\\"city\\":\\"Leeds\\"}"
+                onClick={[Function]}
+              >
+                Leeds
+              </a>
+            </li>
+            <li
+              className="side-bar-links-item"
+            >
+              <a
+                className="item"
+                href="/?query={\\"city\\":\\"Sheffield\\"}"
+                onClick={[Function]}
+              >
+                Sheffield
+              </a>
+            </li>
+            <li
+              className="side-bar-links-item"
+            >
+              <a
+                className="item"
+                href="/?query={\\"city\\":\\"Liverpool\\"}"
+                onClick={[Function]}
+              >
+                Liverpool
+              </a>
+            </li>
+          </div>
+          <h5>
+            Sort by:
+          </h5>
+          <div
+            className="sortGroup"
+          >
+            <li
+              className="side-bar-links-item"
+            >
+              <a
+                className="item"
+                href="/?sort={\\"price\\":1}"
+                onClick={[Function]}
+              >
+                Price Ascending
+              </a>
+            </li>
+            <li
+              className="side-bar-links-item"
+            >
+              <a
+                className="item"
+                href="/?sort={\\"price\\":-1}"
+                onClick={[Function]}
+              >
+                Price Descending
+              </a>
+            </li>
+          </div>
+        </ul>
+      </div>
+    </div>
+    <div
+      className="column right"
+    />
+  </div>
+</div>
+`;

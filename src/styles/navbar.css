@@ -1,0 +1,49 @@
+.navbar {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.navbar-logo {
+  width: 180px;
+  height: 40px;
+  align-self: center;
+}
+
+.navbar-links-item a {
+  text-decoration: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.navbar li {
+  margin: 0;
+  padding: 20px;
+  display: inline-block;
+}
+
+.classVP {
+  font-weight: bolder;
+}
+
+.classAP {
+  font-weight: bolder;
+}
+
+.classSP {
+  font-weight: bolder;
+}
+
+.button-sign-out {
+  color: white;
+  font-weight: bold;
+  background-color: #3b5998;
+  padding: 20px;
+}

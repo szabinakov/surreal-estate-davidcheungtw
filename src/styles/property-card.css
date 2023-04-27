@@ -1,0 +1,56 @@
+.property-card {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: small;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 10px;
+}
+
+.property-card ul {
+  border: 2px lightseagreen solid;
+  margin: 5px;
+  padding: 0;
+  width: 300px;
+}
+
+.property-card li {
+  display: block;
+  margin: 5px;
+  padding: 0;
+}
+
+.property-card-type {
+  font-style: italic;
+}
+
+.property-card-email {
+  text-align: center;
+  background-color: darkcyan;
+}
+
+.property-card-email a {
+  text-decoration: none;
+  color: white;
+}
+
+.property-card-email a svg {
+  vertical-align: middle;
+}
+
+.button-save {
+  width: 96%;
+  margin: 5px;
+}
+
+.button-save:hover {
+  background-color: rgb(255, 200, 152);
+}
+
+.button-remove {
+  width: 96%;
+  margin: 5px;
+}
+
+.button-remove:hover {
+  background-color: rgb(255, 200, 152);
+}

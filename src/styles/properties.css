@@ -1,0 +1,24 @@
+.properties {
+  padding: 0.5rem;
+  display: flex;
+  color: black;
+}
+
+.properties > .item {
+  display: inline-block;
+  width: 33.33%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+}
+
+.left {
+  width: 200px;
+}
+
+.right {
+  width: 80%;
+}
